@@ -10,7 +10,7 @@ const Booklist = () => {
 
     const getBooks = async () => {
         try {
-            let result = await fetch("http://localhost:3000/book-list");
+            let result = await fetch("https://library-management-system-z8s7.onrender.com/book-list");
             let data = await result.json();
             setBooks(data);
         } catch (error) {
@@ -20,7 +20,7 @@ const Booklist = () => {
 
     const requestBook = async (book) => {
         try {
-            const response = await fetch('http://localhost:3000/request-book', {
+            const response = await fetch('https://library-management-system-z8s7.onrender.com/request-book', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ const Booklist = () => {
     };
     const deleteProduct = async (id) => {
         try {
-            let result = await fetch(`http://localhost:3000/book/${id}`, {
+            let result = await fetch(`https://library-management-system-z8s7.onrender.com/book/${id}`, {
                 method: 'DELETE'
             });
             let data = await result.json();

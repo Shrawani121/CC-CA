@@ -8,7 +8,7 @@ const StudentList = () => {
     }, [])
 
     const getUsers = async () => {
-        let result = await fetch("http://localhost:3000/student-list");
+        let result = await fetch("https://library-management-system-z8s7.onrender.com/student-list");
         let data = await result.json();
         setUsers(data)
     }

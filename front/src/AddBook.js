@@ -18,7 +18,7 @@ const AddBook = () => {
 
         console.warn(bookname, semester, departments);
 
-        const result = await fetch("http://localhost:3000/bookss", {
+        const result = await fetch("https://library-management-system-z8s7.onrender.com/bookss", {
             method: 'post',
             body: JSON.stringify({ departments, bookname, semester }),
             headers: {

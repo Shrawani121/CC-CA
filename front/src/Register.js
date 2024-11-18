@@ -24,7 +24,7 @@ const Register = () => {
 
     const collectData = async () => {
         try {
-            const result = await fetch("http://localhost:3000/register", {
+            const result = await fetch("https://library-management-system-z8s7.onrender.com/register", {
                 method: 'post',
                 body: JSON.stringify({ role, username, email, password, phone, rolenumber,  address }),
                 headers: {

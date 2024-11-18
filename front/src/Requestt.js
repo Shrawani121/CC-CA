@@ -6,7 +6,7 @@ const Requestt = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await fetch('http://localhost:3000/requests');
+        const response = await fetch('https://library-management-system-z8s7.onrender.com/requests');
         const data = await response.json();
         setRequests(data);
       } catch (error) {
