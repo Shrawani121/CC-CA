@@ -22,7 +22,7 @@ const AddStudent = () => {
 
     const collectData = async () => {
         try {
-            const result = await fetch("https://library-management-system-z8s7.onrender.com/register", {
+            const result = await fetch("https://cc-ca-0eps.onrender.com/register", {
                 method: 'post',
                 body: JSON.stringify({ role, username, email, password, phone, rolenumber,  address }),
                 headers: {

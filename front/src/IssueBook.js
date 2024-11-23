@@ -12,7 +12,7 @@ function IssueBook() {
   useEffect(() => {
     async function fetchBooks() {
       try {
-        const response = await axios.get('https://library-management-system-z8s7.onrender.com/book-list');
+        const response = await axios.get('https://cc-ca-0eps.onrender.com/book-list');
         setBooks(response.data);
       } catch (error) {
         console.error(error);
@@ -36,7 +36,7 @@ function IssueBook() {
 
   const handleRequest = async () => {
     try {
-      await axios.post('https://library-management-system-z8s7.onrender.com/books', {
+      await axios.post('https://cc-ca-0eps.onrender.com/books', {
         bookname: bookname,
         departments: departments,
         semester: semester,
@@ -50,11 +50,11 @@ function IssueBook() {
 
   const handleAccept = async (book) => {
     try {
-      await axios.put(`https://library-management-system-z8s7.onrender.com/bookk/${book._id}`, {
+      await axios.put(`https://cc-ca-0eps.onrender.com/bookk/${book._id}`, {
         status: 'Accepted',
       });
       alert('Book request accepted!');
-      const response = await axios.get('https://library-management-system-z8s7.onrender.com/book-list');
+      const response = await axios.get('https://cc-ca-0eps.onrender.com/book-list');
       setBooks(response.data);
     } catch (error) {
       console.error(error);
@@ -63,11 +63,11 @@ function IssueBook() {
 
   const handleReject = async (book) => {
     try {
-      await axios.put(`https://library-management-system-z8s7.onrender.com/bookk/${book._id}`, {
+      await axios.put(`https://cc-ca-0eps.onrender.com/bookk/${book._id}`, {
         status: 'Rejected',
       });
       alert('Book request rejected!');
-      const response = await axios.get('https://library-management-system-z8s7.onrender.com/book-list');
+      const response = await axios.get('https://cc-ca-0eps.onrender.com/book-list');
       setBooks(response.data);
     } catch (error) {
       console.error(error);
